@@ -12,10 +12,6 @@ ENV UID=${UID:-1010}
 ENV GID=${GID:-1010}
 ENV PORT=${PORT:-3000}
 
-RUN if [ -n "$TARGETPLATFORM" ] && [ "$TARGETPLATFORM" != "linux/amd64" ]; then \
-      apk add --no-cache qemu-aarch64-static; \
-    fi
-
 RUN addgroup -g ${GID} --system meting \
     && adduser -G meting --system -D -s /bin/sh -u ${UID} meting
 
