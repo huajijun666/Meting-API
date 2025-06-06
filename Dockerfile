@@ -1,4 +1,4 @@
-FROM node:23-alpine3.20
+FROM --platform=linux/arm64 node:23-alpine3.20
 
 WORKDIR /app
 COPY . /app
