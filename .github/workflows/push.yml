@@ -1,6 +1,9 @@
 name: 构建并推送镜像
 on: push
 
+permissions:
+  contents: read
+
 jobs:
   npm-build:
     name: npm工作
